@@ -39,7 +39,7 @@ public class HomeController : Controller
     {
         return View();
     }
-
+        //este es privacy
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
