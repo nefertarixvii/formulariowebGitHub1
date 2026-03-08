@@ -13,8 +13,25 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    // Muestra el formulario
     public IActionResult Index()
     {
+        return View();
+    }
+
+    // Procesa el formulario
+    [HttpPost]
+    public IActionResult Index(string nombre, DateTime fecha, string hobbies, string pago)
+    {
+        if (pago == "no")
+        {
+            ViewBag.Mensaje = "Usted aún no ha completado su pago.";
+        }
+        else
+        {
+            ViewBag.Mensaje = "Registro completado correctamente.";
+        }
+
         return View();
     }
 
