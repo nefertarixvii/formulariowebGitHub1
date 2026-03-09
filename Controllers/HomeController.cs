@@ -25,7 +25,7 @@ public class HomeController : Controller
     {
         if (pago == "no")
         {
-            ViewBag.Mensaje = "Usted aún no ha completado su pago.";
+            ViewBag.Mensaje = "Usted no ha completado su pago.";
         }
         else
         {
