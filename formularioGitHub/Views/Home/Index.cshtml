@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Registro GameJam";
+}
+
+<style>
+    body{
+        background-color:#CCCCFF;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-container{
+        width:400px;
+        margin:40px auto;
+        padding:20px;
+        border-radius:10px;
+        background-color:#9966CC;
+        color:white;
+        box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    input, select{
+        width:100%;
+        padding:8px;
+        margin:6px 0 12px 0;
+        border-radius:5px;
+        border:none;
+    }
+
+    button{
+        width:100%;
+        padding:10px;
+        background-color:#7FAFD4;
+        border:none;
+        border-radius:5px;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background-color:#5f9bc6;
+    }
+
+    .mensaje{
+        margin-top:15px;
+        font-weight:bold;
+    }
+</style>
+
+<div class="form-container">
+
+<h2>Registro GameJam 🎮</h2>
+
+<form method="post">
+
+    <label>Nombre del jugador</label>
+    <input type="text" name="nombre" required />
+
+    <label>Fecha de nacimiento</label>
+    <input type="date" name="fecha" required />
+
+    <label>Hobbies</label>
+    <input type="text" name="hobbies" />
+
+    <label>Pago de matrícula</label>
+    <select name="pago">
+        <option value="no">No ha pagado</option>
+        <option value="si">usted ha pagado</option>
+        ramita
+    </select>
+
+    <button type="submit">Registrar</button>
+
+</form>
+
+@if(ViewBag.Mensaje != null)
+{
+    <div class="mensaje">
+        @ViewBag.Mensaje
+    </div>
+}
+
+</div>
+<p>version ramita</p>
+<p>version ramitaUNO</p>
